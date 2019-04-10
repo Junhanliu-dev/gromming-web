@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tom Pet Grooming</title>
+
+    <link rel="stylesheet" href="css/generic.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="getSession.php"></script>  
+    <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div id="header">
+    <h1><font face="impact">TOM PET GROOMING</font></h1>
+    <div class="links">
+        <ul id="menu">
+            <li data-menuanchor="Login"><a href="#Login">Login Dashboard</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div id="setAppointment" class="modal" >
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close"></span>
+            <h2>Book Appointment </h2><br><br><br>
+        </div>
+		<form method="post"  action="makeAppoin.php">
+        <label for="AppointmentdogSelect">Select Dog   :</label>
+        <select id="AppointmentdogSelect" name="AppointmentdogSelect">
+        </select>
+        <br> <br>
+
+        <label for="Service"> Groom Options:</label>
+        <select id="Service" name="Service">
+            <option label="wash only" value="Wash only"></option>
+            <option label="wash and nail clipping" value="Wash and nail clipping"></option>
+            <option label="normal grooming" value="Normal grooming"></option>
+            <option label="deluxe grooming" value="Deluxe grooming"></option>
+        </select>
+        <br> <br>
+
+        <label for="selectTime"> Select Time:</label>
+        <select id="selectTime"  onchange = "checkValidTime()" name="selectTime">
+        </select>
+        <br> <br>
+
+        <label for="selectDate" > Select Date:</label>
+        <select id="selectDate" name="selectDate" name="selectDate" onchange = "checkValidTime()">
+        </select>  
+		<br> <br>
+
+        <label for="Description">   Description   :</label>
+        <textarea name="content" rows="5" placeholder="" id = "Description">Nothing</textarea>
+        <br>
+        <div class="modal-footer">
+            <button class="button" style = "float:right" button id =  "appointmentCancle" name="appointmentCancle"> Cancle</button>
+            <button class="button" style = "float:right" button id =  "appointmentConfirm" name="appointmentConfirm"> Confirm</button>
+        </div>
+		</form>	
+    </div>
+</div>
+
+<div id="userInfoPage" class="modal" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close"></span>
+            <h2>UserInfo</h2>
+        </div>
+        <div id = "NameField"> Name : </div> <br>
+        <div id = "HomeField"> Home : </div> <br>
+        <div id = "AddressField"> Address :  </div> <br>
+        <div id = "PhoneNumberField"> Phone number  : </div> <br>
+        <p> Select Dog:</p>
+        <select id="selectDog" onchange = "displayDog(this)">
+            <option label="Select your dog"> </option>
+        </select><br><br>
+
+        <div id = "DogNameField"> Dog Name : </div> <br>
+        <div id = "breedField"> Breed : </div> <br>
+    <div id = "DogBirth"> Dog Birth : </div> <br>
+    <div class="modal-footer">
+    <button class="button" style = "float:right" button id = "confirmUserInfo">Confirm </button>
+</div>
+</div>
+</div>
+
+
+<div id="AppointmentInfoPage" class="modal" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close"></span>
+            <h2>AppointmentInfo</h2>
+        </div>
+
+        <p> Select Appointment:</p>
+        <select id="selectAppoinment" onchange = "getAppointment(this)">
+            <option label="Select Appointment"> </option>
+        </select>
+        <br> <br>
+
+        <div id = "DogNameApp"> </div> <br>
+        <div id = "ServiceApp"> </div> <br>
+		<div id = "date"> </div> <br>
+        <div id = "time"> </div> <br>
+        <div id = "comment"></div> <br>
+
+            <button class="button" style = "float:right" button id = "confirmAppointmentInfo">Confirm </button>
+        </div>
+    </div>
+
+
+<div id="ReschedualPage" class="modal" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close"></span>
+            <h2>Reschedual</h2>
+        </div>
+
+		<form method="post"  action="reschedule.php">
+        <p> Select Appointment:</p>
+        <select id="SelectReschedualAppoinment" name="SelectReschedualAppoinment" onchange = "getReAppointment(this)">
+            <option label="Select Appointment"> </option>
+        </select>
+        <br> <br>
+		
+		<div id = "ReDogNameApp"> </div> <br>
+        <div id = "ReServiceApp"> </div> <br>
+		<div id = "Redate"> </div> <br>
+        <div id = "Retime"> </div> <br>
+        <div id = "Recomment"></div> <br>
+
+        <label for="ReschedualTime" > Select Time:</label>
+        <select id="ReschedualTime" name="ReschedualTime" onchange="checkSchduleTime()">
+        </select>
+        <br> <br>
+
+        <label for="ReschedualDate"> Select Date:</label>
+        <select id="ReschedualDate" name="ReschedualDate">
+
+        </select>  <br> <br>
+
+
+        <button class="button" style = "float:right" button id = "ReschedualBack" name="ReschedualBack">Back </button>
+        <button class="button" style = "float:right" button id = "CancelAppointment" name="CancelAppointment" onclick="reload()"> Cancel This Appointment </button>
+        <button class="button" style = "float:right" button id = "confirmReschedual" name="confirmReschedual">Confirm Change</button>
+		</form>
+	</div>
+</div>
+
+
+<div id="fullpage">
+
+    <div id = "AfterLogin" div class="section started">
+        <h4  style= "margin-top: 150px" h4 id = "titleCustomer">Welcome! </h4>
+        <br><br><br><br><br><br><br>
+        <button class="button1" button id="checkInfo">Check User Info</button>
+        <a href="AddEditPage.html"><button class="button1" button id ="AddEdit">Add&Edit Info</button></a>
+        <button class="button1" button id = "Logout">Logout</button>             <br>
+        <button class="button1" button id="makeAppointment">Make Appointment</button>
+        <button class="button1" button id="checkAppointment" >Check Appointment</button>
+        <button class="button1" button id="rescheduleButton" > Reschedule </button> <br>
+
+    </div>
+</div>
+
+</body>
+
+</html>

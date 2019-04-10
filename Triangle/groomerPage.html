@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tom Pet Grooming</title>
+
+    <link rel="stylesheet" href="css/generic.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="getSession.php"></script>
+    <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+<div id="header">
+    <h1><font face="impact">TOM PET GROOMING</font></h1>
+    <div class="links">
+        <ul id="menu">
+            <li data-menuanchor="GroomerPage"><a href="#GroomerPage">Groomer</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="CheckBooking" class="modal" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close"></span>
+            <h2>Bookings</h2>
+            <p> Select Users:</p>
+            <select id="selectBookedUser" onchange = "displayUserBooking(this)" >
+                <option label="Select user" > </option>
+            </select><br><br>
+            <div id="UserAppointmentinfo"> </div>
+
+            <button class="button" style = "float:right" button id = "confirmInfo">Confirm </button>
+        </div>
+    </div>
+</div>
+
+<div id="Groomerpage">
+    <div id = "groomerMain" div class="section started">
+
+        <h4  style= "margin-top: 150px" id = "titleCustomer">Welcome  Groomer! </h4>
+        <br><br><br><br><br><br><br>
+        <button class="button1" button id="checkUserBookings"> Check Appointment</button>
+        <button class="button1" button id = "Logout2" >Logout</button>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #FFF;
+  opacity: 0.9;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  opacity: 0.6;
+}
+.radio {
+    margin: 0 auto;
+}
+
+  a:hover {
+    opacity: 0.9;
+  }
+
+  a:active {
+    opacity: 1;
+  }
+  .label1{
+      color:black;
+  }
+h1 {
+  font-size: 3.1em;
+  font-weight: bolder;
+}
+
+h2 {
+   font-weight: bold;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 3.1em;
+  font-weight: bold;
+    font-family: 'impact';
+}
+
+h5 {
+  font-weight: bold;
+}
+
+input, textarea {
+  border-radius: 1em;
+  background-color: #FFF;
+  color: #2C3E50;
+  opacity: 0.9;
+  width: 60%;
+  min-height: 3.2em;
+  padding: 0 1em;
+  margin: 0.5em;
+  border: 2px solid #4D5C6B;
+  transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -webkit-transition: border 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13pt;
+}
+
+textarea {
+  padding: 0.5em 1em;
+  resize: none;
+}
+
+input:focus, textarea:focus {
+  border: 2px solid #2C3E50;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+p {
+  color : #92a8d1;
+}
+
+.modal-content {
+    background-color: #264348;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    align: "center";
+}
+label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}​
+
+.button{
+     height:200px;
+     width:200px;
+ }
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#header {
+  position: fixed;
+  height: 5em;
+  width: 100%;
+  z-index: 9;
+  background-color: #264348;
+  font-weight: 300;
+}
+
+  #header h1 {
+    position: absolute;
+    left: 0.2em;
+    bottom: 0;
+  }
+
+  #header h1 a {
+    opacity: 0.9;
+  }
+
+  .links {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.2em;
+    font-size: 1.6em;
+    opacity: 0.6;
+  }
+
+    .links li {
+      display: inline-block;
+      padding-left: 1.5em;
+    }
+
+    .links li.active a {
+      opacity: 1;
+    }
+
+.section {
+  text-align: center;
+}
+
+.LoginPage{
+  text-align: center;
+}
+
+.AppointmentPage{
+  text-align: center;
+}
+
+.loginModal{
+    visibility: hidden;
+}
+i.fa-sign-in {
+      font-size: 15em;
+    }
+
+i.fa-calendar {
+      font-size: 15em;
+    }
+i.fa-retweet {
+    font-size: 15em;
+}
+
+.button {
+    margin: 13px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.button1 {
+    background-color: #044F67;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    height:100px;
+    width:250px;
+}
+
+.button2 {
+    background-color: #044F67;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    height:60px;
+    width:120px;
+}
+
+
+
+.button1:hover {opacity: 1}
+
+#loginEvent{
+    background-image: url('../imgs/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover
+}
+
+#groomerMain{
+    background-image: url('../imgs/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover
+}
+
+#AfterLogin{
+    background-image: url('../imgs/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size:cover
+}
+
+#AddEditEvent{
+    background-image: url('../imgs/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover
+}

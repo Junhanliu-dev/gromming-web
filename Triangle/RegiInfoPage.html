@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tom Pet Grooming</title>
+
+    <link rel="stylesheet" href="css/generic.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div id="header">
+    <h1><font face="impact">TOM PET GROOMING</font></h1>
+    <div class="links">
+        <ul id="menu">
+            <li data-menuanchor="AddEditPage"><a href="#AddEditPage">Edit User Info</a></li>
+        </ul>
+    </div>
+
+</div>
+<div id="AddEditMain">
+    <div id = "AddEditEvent" div class="section started">
+
+        <form method="post" action="reginfo.php">
+
+            <label for = "editNameText" label class = "label1">Name</label>
+            <input type= "text" name="editName" id="editNameText" value="" ><br>
+            <label for = "editHomeText" label class = "label1">Home number</label>
+            <input type= "text" name="editHome" id="editHomeText" value=""><br>
+            <label for= "editAddressText" label class = "label1">Address</label>
+            <input type="text" name="editAddress" id="editAddressText" value=""><br>
+            <label for = "editPhone" label class = "label1">Phone number</label>
+            <input type="text" name="editPhone" id="editPhone" value=""><br>
+
+            <button id="submit" name="submit" button class = "button2">submit</button>
+			<button id="skip" name="skip" button class = "button2">skip</button>
+
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>

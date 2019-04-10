@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tom Pet Grooming</title>
+
+    <link rel="stylesheet" href="css/generic.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="getSession.php"></script>  
+    <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1><font face="impact">TOM PET GROOMING</font></h1>
+      <div class="links">
+        <ul id="menu">
+          <li data-menuanchor="BeforeLogin"><a href="#BeforeLogin">Login & Register</a></li>
+        </ul>
+      </div>
+
+    </div>
+      <!-- The Modal -->
+      <div id="loginPage" class="modal" >
+       <!-- Modal content -->
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="close"></span>
+              <h2>Login</h2>
+          </div>
+		  <form method="post" action="regnlogin.php">
+              <label for="email">Email    :</label>
+          <input type="text" name = "email" id="email"> <br>
+          <label for="password" >Password</label>
+          <input type="password" name = "password" id="password">
+              <div class="radio col-sm-3">
+                  <label><input type="radio" name="userType" value="grommer"><h2>Groomer</h2></label>
+                  <label><input type="radio" name="userType" value="customer"><h2>Customer</h2></label>
+              </div>
+          <div class="modal-footer">
+              <button class="button" style = "float:right" button id = "Register" name = "register"> Register </button>
+              <button class="button" style = "float:right" button id = "confirmLogin" name = "confirm"> Confirm </button>
+          </div>
+		  </form>
+      </div>
+</div>
+
+      <div id="mainpage">
+          <div id = "loginEvent" div class="section started">
+          <i class='fa fa-sign-in' id = "beforeLoginIcon" ></i>
+          <h3 id = "beforeLoginText">Login & Register</h3>
+      </div>
+      </div>
+
+  </body>
+
+</html>
